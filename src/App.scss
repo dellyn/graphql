@@ -1,0 +1,142 @@
+$basic: rgb(85, 156, 171);
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+div,
+p,
+a,
+input {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+input {
+  padding: 3px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+.column {
+  width: 20%;
+  min-width: 200px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 15px;
+  padding: 10px 0px;
+  height: 100%;
+
+  .race {
+    background-color: $basic;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .character {
+    padding: 5px;
+    margin: 3px 0px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    input {
+      width: 100%;
+    }
+    img {
+      margin-right: 10px;
+    }
+    .name {
+      width: 100%;
+      overflow: hidden;
+      p {
+        text-align: left;
+      }
+    }
+    button:not(:last-child) {
+      margin: 0px 10px 0px 5px;
+    }
+  }
+  .d-flex {
+    align-items: baseline;
+    input {
+      font-size: 1em;
+      height: 20px;
+      width: 60%;
+    }
+    .add-btn {
+      width: 50px;
+      height: 30px;
+      font-weight: bold;
+      margin: 10px 0px 0px 10px;
+    }
+  }
+}
+.race-wrapper {
+  margin-top: 20px;
+}
+
+.status-loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  background-color: $basic;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  min-width: 35px;
+  height: 25px;
+  border-radius: 3px;
+  padding: 0px 5px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: 0.1s ease-in-out;
+  color: #fff;
+
+  &:hover {
+    background-color: rgb(37, 37, 37);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    .d-flex {
+      justify-content: center;
+      input {
+        margin-right: 10px;
+      }
+      .add-btn {
+        margin-top: 10px;
+        width: 60px;
+      }
+    }
+  }
+}
